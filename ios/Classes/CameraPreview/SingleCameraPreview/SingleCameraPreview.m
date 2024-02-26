@@ -206,7 +206,7 @@
 - (CGFloat)getMaxZoom {
   CGFloat maxZoom = _captureDevice.activeFormat.videoMaxZoomFactor;
   // Not sure why on iPhone 14 Pro, zoom at 90 not working, so let's block to 50 which is very high
-  return maxZoom > 50.0 ? 50.0 : maxZoom;
+  return maxZoom > 8 ? 8 : maxZoom;
 }
 
 /// Dispose camera inputs & outputs
