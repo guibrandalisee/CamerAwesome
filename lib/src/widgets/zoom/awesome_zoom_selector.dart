@@ -14,8 +14,8 @@ class AwesomeZoomSelector extends StatefulWidget {
 }
 
 class _AwesomeZoomSelectorState extends State<AwesomeZoomSelector> {
-  double? minZoom;
-  double? maxZoom;
+  num? minZoom;
+  num? maxZoom;
 
   @override
   void initState() {
@@ -46,8 +46,8 @@ class _AwesomeZoomSelectorState extends State<AwesomeZoomSelector> {
             if (snapshot.hasData) {
               return _ZoomIndicatorLayout(
                 zoom: snapshot.requireData,
-                min: minZoom!,
-                max: maxZoom!,
+                min: minZoom!.toDouble(),
+                max: maxZoom!.toDouble(),
                 sensorConfig: widget.state.sensorConfig,
               );
             } else {

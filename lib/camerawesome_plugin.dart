@@ -382,12 +382,12 @@ class CamerawesomePlugin {
   }
 
   /// returns the max zoom available on device
-  static Future<double?> getMaxZoom() {
+  static Future<num?> getMaxZoom() {
     return CameraInterface().getMaxZoom();
   }
 
   /// returns the min zoom available on device
-  static Future<double?> getMinZoom() {
+  static Future<num?> getMinZoom() {
     return CameraInterface().getMinZoom();
   }
 

@@ -1264,7 +1264,7 @@ class CameraInterface {
     }
   }
 
-  Future<double> getMinZoom() async {
+  Future<num?> getMinZoom() async {
     final BasicMessageChannel<Object?> channel = BasicMessageChannel<Object?>(
         'dev.flutter.pigeon.CameraInterface.getMinZoom', codec,
         binaryMessenger: _binaryMessenger);
@@ -1286,11 +1286,11 @@ class CameraInterface {
         message: 'Host platform returned null value for non-null return value.',
       );
     } else {
-      return (replyList[0] as double?)!;
+      return (replyList[0] as num?)!;
     }
   }
 
-  Future<double> getMaxZoom() async {
+  Future<num?> getMaxZoom() async {
     final BasicMessageChannel<Object?> channel = BasicMessageChannel<Object?>(
         'dev.flutter.pigeon.CameraInterface.getMaxZoom', codec,
         binaryMessenger: _binaryMessenger);
@@ -1312,7 +1312,7 @@ class CameraInterface {
         message: 'Host platform returned null value for non-null return value.',
       );
     } else {
-      return (replyList[0] as double?)!;
+      return (replyList[0] as num?)!;
     }
   }
 
